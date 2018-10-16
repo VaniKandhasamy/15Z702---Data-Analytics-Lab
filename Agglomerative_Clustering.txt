@@ -1,3 +1,4 @@
+#import the required packages
 import os
 import pandas as pd
 from scipy.cluster.hierarchy import dendrogram, linkage
@@ -5,16 +6,20 @@ import matplotlib.pyplot as plt
 import numpy as np
 from IPython.display import display
 from sklearn import datasets
+#load the iris dataset
 iris = datasets.load_iris()
 feat = iris.feature_names
+#take only 2 features
 X = iris.data[:, :2]  # we only take the first two features. We could
                       # avoid this ugly slicing by using a two-dim dataset
+#set the target label
 y = iris.target
 y_name = ['Setosa', 'Versicolour', 'Virginica']
+
+#agglomerative clustering
 from sklearn.cluster import AgglomerativeClustering
 clustering = AgglomerativeClustering(linkage="ward", n_clusters=3)
 clustering.fit(X);
-
 
 # MinMax scale the data so that it fits nicely onto the 0.0->1.0 axes of the plot.
 from sklearn import preprocessing
@@ -28,11 +33,13 @@ for i in range(X.shape[0]):
              fontdict={'weight': 'bold', 'size': 9}
         )
 
+#plotting 
 plt.xticks([])
 plt.yticks([])
 plt.axis('off')
 plt.show()
 figure = plt.figure(figsize=(7.5, 5))
+#dendrogram representation
 dendrogram(
     linkage_matrix,
     truncate_mode='lastp',  # show only the last p merged clusters
@@ -41,6 +48,7 @@ dendrogram(
     leaf_font_size=12.,
     show_contracted=True,  # to get a distribution impression in truncated branches
 )
+#plotting parameters
 plt.title('Hierarchical Clustering Dendrogram (Ward, aggrogated)')
 plt.xlabel('sample index or (cluster size)')
 plt.ylabel('distance')

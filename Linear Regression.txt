@@ -1,10 +1,12 @@
+#linear regression
 import numpy as np
+#points
 x=[1,2,3,4]
 y=[2,5,6,7]
 for var in range(len(x)):
     x[var]=int(x[var])
     y[var]=int(y[var])
-
+#finding mean
 x_mean=float(np.mean(x))
 y_mean=float(np.mean(y))
 n=len(x)
@@ -12,11 +14,12 @@ s1=int(0); s2=int(0);
 for var in range(len(x)):
     s1=s1+(x[var]*y[var])
     s2=s2+(x[var]*x[var])
-    
+#slope and intercept calculation    
 slope=float((s1-(n*x_mean*y_mean))/(s2-(n*x_mean*x_mean)))
 intercept=y_mean-x_mean*slope
 y_vals=float((slope*x_mean)+intercept)
 
+#plotting the regression line
 import matplotlib.pyplot as plt
 plt.plot(x,y,'ro')
 

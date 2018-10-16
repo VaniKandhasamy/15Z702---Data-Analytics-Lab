@@ -1,22 +1,29 @@
+#import the required packages
 import pandas as pd
 from sklearn.metrics import accuracy_score
-df1 = pd.read_csv("C:/Users/umarm/Downloads/movie_metadata.csv")
-df1=df1[['num_critic_for_reviews','director_facebook_likes','actor_1_facebook_likes','movie_facebook_likes','num_user_for_reviews','imdb_score']]
-df1=df1.dropna()
-df1 = df1[df1.movie_facebook_likes != 0]
-df1 = df1[df1.director_facebook_likes != 0.0]
-df1 = df1[df1.num_user_for_reviews != 0.0]
-df1 = df1[df1.num_critic_for_reviews != 0.0]
-df1 = df1[df1.actor_1_facebook_likes != 0.0]
-df1 = df1[df1.imdb_score != 0.0]
-x=df1[['num_critic_for_reviews','director_facebook_likes','actor_1_facebook_likes','movie_facebook_likes','num_user_for_reviews']]
-y=df1[['imdb_score']]
+#reading the csv file
+data = pd.read_csv("C:/Users/umarm/Downloads/movie_metadata.csv")
+data=data[['num_critic_for_reviews','director_facebook_likes','actor_1_facebook_likes','movie_facebook_likes','num_user_for_reviews','imdb_score']]
+#preprocessing
+data=data.dropna()
+data = data[data.movie_facebook_likes != 0]
+data = data[data.director_facebook_likes != 0.0]
+data = data[data.num_user_for_reviews != 0.0]
+data = data[data.num_critic_for_reviews != 0.0]
+data = data[data.actor_1_facebook_likes != 0.0]
+data = data[data.imdb_score != 0.0]
+#data and class labels
+x=data[['num_critic_for_reviews','director_facebook_likes','actor_1_facebook_likes','movie_facebook_likes','num_user_for_reviews']]
+y=data[['imdb_score']]
 y=y.round()
+#training and testing data
 from sklearn.model_selection import train_test_split
 x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.20)
+#neural network
 from sklearn.neural_network import MLPClassifier  
-mlp = MLPClassifier(hidden_layer_sizes=(7, 6, 5), max_iter=1000, alpha=0.00001, solver='sgd', verbose=10 )  
-mlp.fit(x_train, y_train.values.ravel())
-
-y_pred = mlp.predict(x_test)
+classifier = MLPClassifier(hidden_layer_sizes=(7, 6, 5), max_iter=1000, alpha=0.00001, solver='sgd', verbose=10 )  
+#fitting
+classifier.fit(x_train, y_train.values.ravel())
+#predictions
+y_pred = classifier.predict(x_test)
 accuracy_score(y_test,y_pred)
