@@ -1,0 +1,27 @@
+#Reading a csv file
+import pandas as pd 
+import numpy as np 
+import matplotlib.pyplot as plt 
+df=pd.read_csv('EmployeeAttrition.csv') 
+df
+
+#Summary statistics of the data set(numeric columns)
+df.describe()
+
+#Summary statistics of the data set(character columns)
+df.describe(include=['object'])
+
+#Summary statistics of the data set(all columns)
+df.describe(include='all')
+
+#Sum of values for columns
+df.sum()
+
+#Plotting of data set
+df.boxplot()
+
+#Scatter plot for age and attrition
+plt.scatter(df["Age"],df["Attrition"])
+
+
+
