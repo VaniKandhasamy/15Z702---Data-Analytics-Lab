@@ -1,5 +1,5 @@
 # 15Z702---Data-Analytics-Lab
-:octocat: Data Analytics Lab Question
+:octocat: Data Analytics Lab Question<br>
 :question: Perform descriptive analysis on EmployeeAttrition dataset <br>
 :question: Perform web scrapping on PSG Tech website<br>
 :question: Use MovieGenre dataset to perform image processing<br>
