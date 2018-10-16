@@ -1,0 +1,20 @@
+# Gaussian Naive Bayes
+from sklearn import datasets
+from sklearn import metrics
+from sklearn.naive_bayes import GaussianNB
+from sklearn.metrics import accuracy_score
+# load the iris datasets
+dataset = datasets.load_iris()
+from sklearn.model_selection import train_test_split
+x_train,x_test,y_train,y_test=train_test_split(dataset.data,dataset.target,test_size=0.20)
+# fit a Naive Bayes model to the data
+model = GaussianNB()
+model.fit(x_train, y_train)
+print(model)
+# make predictions
+expected = y_test
+predicted = model.predict(x_test)
+# summarize the fit of the model
+print(metrics.classification_report(expected, predicted))
+print(metrics.confusion_matrix(expected, predicted))
+accuracy_score(expected,predicted)

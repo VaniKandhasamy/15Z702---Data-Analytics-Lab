@@ -1,0 +1,28 @@
+import numpy as np
+x=[1,2,3,4]
+y=[2,5,6,7]
+for var in range(len(x)):
+    x[var]=int(x[var])
+    y[var]=int(y[var])
+
+x_mean=float(np.mean(x))
+y_mean=float(np.mean(y))
+n=len(x)
+s1=int(0); s2=int(0);
+for var in range(len(x)):
+    s1=s1+(x[var]*y[var])
+    s2=s2+(x[var]*x[var])
+    
+slope=float((s1-(n*x_mean*y_mean))/(s2-(n*x_mean*x_mean)))
+intercept=y_mean-x_mean*slope
+y_vals=float((slope*x_mean)+intercept)
+
+import matplotlib.pyplot as plt
+plt.plot(x,y,'ro')
+
+axes = plt.gca()
+x_vals = np.array(axes.get_xlim())
+y_vals = intercept + slope * x_vals
+g1 = plt.plot(x_vals, y_vals, '--')
+g2 = g1.add_subplot()
+g2.show()
