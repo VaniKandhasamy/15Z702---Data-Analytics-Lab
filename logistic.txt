@@ -1,0 +1,224 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     Sapfile1
+Instances:    131
+Attributes:   22
+              ge
+              cst
+              tnp
+              twp
+              iap
+              esp
+              arr
+              ms
+              ls
+              as
+              fmi
+              fs
+              fq
+              mq
+              fo
+              mo
+              nf
+              sh
+              ss
+              me
+              tt
+              atd
+Test mode:    evaluate on training data
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                                 Class
+Variable                          Good                 Average
+==============================================================
+ge=F                           210.675                 120.678
+cst=G                          91.8857                 27.0475
+cst=ST                         -133.82                 25.8328
+cst=SC                         86.0415                -12.3064
+cst=OBC                       -76.3014               -114.1398
+cst=MOBC                      297.9629                435.7426
+tnp=Best                     -402.6822               -162.7421
+tnp=Vg                         89.9216                103.0759
+tnp=Good                      -99.8784               -167.9704
+tnp=Pass                      207.0361                199.2298
+tnp=Fail                             0                       0
+twp=Best                     -212.0232                -59.2147
+twp=Vg                         91.4809                 54.9821
+twp=Good                       24.4312                  45.075
+twp=Pass                     -165.8536               -189.1322
+twp=Fail                             0                       0
+iap=Best                         65.11                -25.2081
+iap=Vg                        -23.3776                 -22.154
+iap=Good                       34.3793                 22.4945
+iap=Pass                     -122.1691                 30.7832
+iap=Fail                             0                       0
+esp=Best                       77.9391               -182.6564
+esp=Vg                        112.4139                 151.305
+esp=Good                      -35.4271                 45.6203
+esp=Pass                     -124.4977               -204.9621
+esp=Fail                             0                       0
+arr=N                         138.6103                116.1284
+ls=V                          174.8719                 39.6792
+as=Paid                       141.0667                -39.9677
+fmi=Vh                       -192.3458               -240.0964
+fmi=High                     -241.6703               -420.3883
+fmi=Am                        110.2674                173.2259
+fmi=Medium                    112.0941                100.7124
+fmi=Low                      -101.3857                 -2.8479
+fs=Large                      444.7295                 82.3456
+fs=Average                    -67.5835                -47.4238
+fs=Small                        35.116                 40.4969
+fq=Il                          21.2554                 55.4546
+fq=Um                          57.3082                  54.749
+fq=10                         -74.5865                -39.2901
+fq=12                          -3.6607                -17.3297
+fq=Degree                     -16.5446                -25.8908
+fq=Pg                         -33.3447               -167.6865
+mq=Il                          37.4415                 40.8229
+mq=Um                         124.9793                  77.672
+mq=10                         -212.979               -190.5112
+mq=12                         -149.478               -267.2992
+mq=Degree                     322.8908                538.6103
+mq=Pg                        -116.5038                316.8215
+fo=Service                    -24.0311                -23.7505
+fo=Business                    85.2045                106.0451
+fo=Retired                    -447.496               -567.2189
+fo=Farmer                        -36.4                -20.0225
+fo=Others                      26.3595                  2.7833
+mo=Service                     72.3056                 93.6745
+mo=Business                  -929.0387               -849.7023
+mo=Retired                     86.1892               -102.9294
+mo=Housewife                   54.9009                  67.864
+mo=Others                    -367.0528               -522.4604
+nf=Large                       291.474                239.8117
+nf=Average                   -150.7799                -48.3306
+nf=Small                     -218.9933               -274.7458
+sh=Good                        62.5946                  2.2886
+sh=Average                     92.8663                 62.3076
+sh=Poor                      -147.3545                 -70.054
+ss=Private                    -57.9536                 11.0368
+me=Eng                         77.3739                 77.6503
+me=Asm                         -4.8289                 -0.1833
+me=Hin                       -320.4866               -328.6872
+me=Ben                       -125.0084               -178.7086
+tt=Large                        46.436                 60.6986
+tt=Average                     28.1571                  9.3905
+tt=Small                      -39.3648                -26.3616
+Intercept                    -279.3009                -55.7664
+
+
+Odds Ratios...
+                                 Class
+Variable                          Good                 Average
+==============================================================
+ge=F              3.125923716482148E91   2.5692771730957287E52
+cst=G             8.043598358712741E39     5.57911648864733E11
+cst=ST                               0   1.6559335362879794E11
+cst=SC           2.3298644006038342E37                       0
+cst=OBC                              0                       0
+cst=MOBC        2.5329390417584592E129  1.7402571517447241E189
+tnp=Best                             0                       0
+tnp=Vg           1.1283877640569779E39    5.825133239139139E44
+tnp=Good                             0                       0
+tnp=Pass          8.215126972576849E89    3.345018329788015E86
+tnp=Fail                             1                       1
+twp=Best                             0                       0
+twp=Vg           5.3658816278570967E39    7.558499845547883E23
+twp=Good          4.077078781796292E10    3.765610854809977E19
+twp=Pass                             0                       0
+twp=Fail                             1                       1
+iap=Best          1.892011008574218E28                       0
+iap=Vg                               0                       0
+iap=Good          8.525815456602809E14         5878374747.7652
+iap=Pass                             0   2.3387573492011855E13
+iap=Fail                             1                       1
+esp=Best          7.055215345601129E33                       0
+esp=Vg            6.618477429206262E48     5.13952542643546E65
+esp=Good                             0    6.496066954267162E19
+esp=Pass                             0                       0
+esp=Fail                             1                       1
+arr=N            1.5764555246375274E60   2.7160839947194763E50
+ls=V              8.829083281597115E75   1.7079051209122144E17
+as=Paid          1.8386572051575268E61                       0
+fmi=Vh                               0                       0
+fmi=High                             0                       0
+fmi=Am             7.73586582655516E47   1.7022894785918423E75
+fmi=Medium        4.806620011029931E48    5.480904128281885E43
+fmi=Low                              0                   0.058
+fs=Large        1.3918179811856256E193    5.784379652922991E35
+fs=Average                           0                       0
+fs=Small          1.781081167878988E15   3.8688506195252416E17
+fq=Il                  1702553855.0768    1.212366694510816E24
+fq=Um              7.73805385782384E24   5.9869936481020984E23
+fq=10                                0                       0
+fq=12                           0.0257                       0
+fq=Degree                            0                       0
+fq=Pg                                0                       0
+mq=Il             1.822388318390262E16   5.3600534100148646E17
+mq=Um             1.895979638957717E54    5.401495028502483E33
+mq=10                                0                       0
+mq=12                                0                       0
+mq=Degree        1.697049912729528E140   8.231545581546222E233
+mq=Pg                                0  3.9247823970651196E137
+fo=Service                           0                       0
+fo=Business      1.0088518310463795E37   1.1344752523891911E46
+fo=Retired                           0                       0
+fo=Farmer                            0                       0
+fo=Others        2.8041500022857605E11                 16.1715
+mo=Service       2.5229805740039127E31    4.811883602618117E40
+mo=Business                          0                       0
+mo=Retired        2.700941201297286E37                       0
+mo=Housewife      6.968908501422523E23   2.9713169172719044E29
+mo=Others                            0                       0
+nf=Large          3.85063031912337E126  1.4089663970265465E104
+nf=Average                           0                       0
+nf=Small                             0                       0
+sh=Good             1.5293354342038E27                  9.8613
+sh=Average       2.1444878487341486E40   1.1477442603788645E27
+sh=Poor                              0                       0
+ss=Private                           0               62116.313
+me=Eng            4.009219513137535E33    5.285659230755881E33
+me=Asm                           0.008                  0.8325
+me=Hin                               0                       0
+me=Ben                               0                       0
+tt=Large          1.468629443051539E20   2.2963959156597365E26
+tt=Average        1.692268133098162E12              11974.0438
+tt=Small                             0                       0
+
+
+Time taken to build model: 0.13 seconds
+
+=== Evaluation on training set ===
+
+Time taken to test model on training data: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances         131              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0     
+Root mean squared error                  0     
+Relative absolute error                  0.0004 %
+Root relative squared error              0.0011 %
+Total Number of Instances              131     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     Good
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     Average
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     Poor
+Weighted Avg.    1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 56  0  0 |  a = Good
+  0 47  0 |  b = Average
+  0  0 28 |  c = Poor
+
