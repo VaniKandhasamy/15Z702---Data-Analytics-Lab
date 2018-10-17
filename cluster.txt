@@ -1,0 +1,87 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.SimpleKMeans -init 0 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 2 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 10
+Relation:     Sapfile1
+Instances:    131
+Attributes:   22
+              ge
+              cst
+              tnp
+              twp
+              iap
+              esp
+              arr
+              ms
+              ls
+              as
+              fmi
+              fs
+              fq
+              mq
+              fo
+              mo
+              nf
+              sh
+              ss
+              me
+              tt
+              atd
+Test mode:    evaluate on training data
+
+
+=== Clustering model (full training set) ===
+
+
+kMeans
+======
+
+Number of iterations: 4
+Within cluster sum of squared errors: 1170.0
+
+Initial starting points (random):
+
+Cluster 0: F,SC,Good,Good,Vg,Vg,N,Unmarried,V,Free,Medium,Small,Degree,Degree,Business,Housewife,Average,Good,Private,Eng,Average,Average
+Cluster 1: M,ST,Good,Good,Pass,Pass,Y,Unmarried,V,Free,Medium,Small,12,Um,Farmer,Housewife,Average,Average,Govt,Asm,Average,Poor
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+                        Cluster#
+Attribute    Full Data         0         1
+               (131.0)    (71.0)    (60.0)
+==========================================
+ge                   M         F         M
+cst                OBC       OBC       OBC
+tnp               Good        Vg      Good
+twp               Good        Vg      Good
+iap                 Vg        Vg      Good
+esp               Good        Vg      Good
+arr                  N         N         Y
+ms           Unmarried Unmarried Unmarried
+ls                   V         V         V
+as                Paid      Paid      Free
+fmi             Medium    Medium    Medium
+fs               Small     Small     Small
+fq                  Um        Um        Um
+mq                  Um        Um        Um
+fo             Service  Business   Service
+mo           Housewife Housewife Housewife
+nf               Large     Large   Average
+sh             Average      Poor   Average
+ss                Govt      Govt      Govt
+me                 Eng       Eng       Asm
+tt               Small     Small     Small
+atd               Good      Good      Poor
+
+
+
+
+Time taken to build model (full training data) : 0.02 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0       71 ( 54%)
+1       60 ( 46%)
+
